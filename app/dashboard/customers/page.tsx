@@ -10,6 +10,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { UserOutlined } from '@ant-design/icons';
+import { Avatar, Badge, Space } from 'antd';
+
 export default function Page() {
   const pathname = usePathname();
   return (
@@ -48,6 +51,16 @@ export default function Page() {
                         </p>
 
                         <button className="button">View More</button>
+
+                        <Space size={24}>
+                            <Badge count={1}>
+                                <Avatar shape="square" icon={<UserOutlined />} />
+                            </Badge>
+                            <Badge dot>
+                                <Avatar shape="square" icon={<UserOutlined />} />
+                            </Badge>
+                        </Space>
+
                     </div>
                 </div>
             </SwiperSlide>
